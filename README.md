@@ -23,5 +23,6 @@ You can add the infoDAT to see lidar information.
 - [x] Settings for the lidar (change mode, change motor speed, etc)
 - [ ] Add C1 support (need to test)
 - [ ] 2.1.0 SDK crash project now, need to check
+- [ ] V4 version rolled back as was reported doesn't works sometime, V3 release the stable one.
 
 Did you find it useful? - support by [buying me a book](https://www.buymeacoffee.com/vasilyonl)
