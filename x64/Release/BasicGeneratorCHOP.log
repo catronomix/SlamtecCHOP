@@ -1,0 +1,17 @@
+﻿  SlamtecCHOP.cpp
+G:\Loose collective\digital game\SlamtecCHOP-asterix\SlamtecCHOP.cpp(210,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+G:\Loose collective\digital game\SlamtecCHOP-asterix\SlamtecCHOP.cpp(210,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Parameters.cpp
+  Generating Code...
+SlamtecCHOP.obj : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in RPLidarDevice.obj
+SlamtecCHOP.obj : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MTd_StaticDebug' in RPLidarDevice.obj
+Parameters.obj : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in RPLidarDevice.obj
+Parameters.obj : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MTd_StaticDebug' in RPLidarDevice.obj
+rplidar_driver.lib(sl_serial_channel.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+     Creating library G:\Loose collective\digital game\SlamtecCHOP-asterix\x64\Release\SlamtecCHOP.lib and object G:\Loose collective\digital game\SlamtecCHOP-asterix\x64\Release\SlamtecCHOP.exp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4217: symbol '_invalid_parameter_noinfo_noreturn' defined in 'libucrtd.lib(invalid_parameter.obj)' is imported by 'SlamtecCHOP.obj' in function '"void * __cdecl std::_Allocate_manually_vector_aligned<struct std::_Default_allocate_traits>(unsigned __int64)" (??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z)'
+LINK : warning LNK4217: symbol '__acrt_iob_func' defined in 'libucrtd.lib(_file.obj)' is imported by 'SlamtecCHOP.obj' in function 'printf'
+LINK : warning LNK4217: symbol '__stdio_common_vfprintf' defined in 'libucrtd.lib(output.obj)' is imported by 'SlamtecCHOP.obj' in function 'printf'
+LINK : warning LNK4217: symbol '__stdio_common_vsprintf_s' defined in 'libucrtd.lib(output.obj)' is imported by 'SlamtecCHOP.obj' in function '"int __cdecl sprintf_s<4096>(char (&)[4096],char const *,...)" (??$sprintf_s@$0BAAA@@@YAHAEAY0BAAA@DPEBDZZ)'
+G:\Loose collective\digital game\SlamtecCHOP-asterix\x64\Release\SlamtecCHOP.dll : fatal error LNK1319: 4 mismatches detected
