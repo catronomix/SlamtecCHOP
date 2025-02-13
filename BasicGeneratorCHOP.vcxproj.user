@@ -18,6 +18,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LocalDebuggerCommand>C:\Program Files\Derivative\TouchDesigner.2022.29530\bin\TouchDesigner.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments>M:\000_GIT\03_TD\SlamtecCHOP\Debug\Debug.toe</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>$(SolutionDir)\Debug\Debug.toe</LocalDebuggerCommandArguments>
   </PropertyGroup>
 </Project>

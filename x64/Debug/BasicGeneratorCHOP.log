@@ -1,0 +1,8 @@
+﻿  SlamtecCHOP.cpp
+G:\Loose collective\digital game\LIDARFINAL\SlamtecCHOP\SlamtecCHOP.cpp(211,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+G:\Loose collective\digital game\LIDARFINAL\SlamtecCHOP\SlamtecCHOP.cpp(211,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Parameters.cpp
+  Generating Code...
+rplidar_driver.lib(sl_serial_channel.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library G:\Loose collective\digital game\LIDARFINAL\SlamtecCHOP\x64\Debug\SlamtecCHOP.lib and object G:\Loose collective\digital game\LIDARFINAL\SlamtecCHOP\x64\Debug\SlamtecCHOP.exp
+  BasicGeneratorCHOP.vcxproj -> G:\Loose collective\digital game\LIDARFINAL\SlamtecCHOP\x64\Debug\SlamtecCHOP.dll
