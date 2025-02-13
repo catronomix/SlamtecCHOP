@@ -102,6 +102,7 @@ SlamtecCHOP::getGeneralInfo(CHOP_GeneralInfo* ginfo, const OP_Inputs*, void*)
 	// input CHOP, which may be timesliced.
 	ginfo->timeslice = false;
 	ginfo->inputMatchIndex = 0;
+	
 }
 
 bool
@@ -110,7 +111,7 @@ SlamtecCHOP::getOutputInfo(CHOP_OutputInfo* info, const OP_Inputs* inputs, void*
 	info->numChannels = num_channels_;
 	info->numSamples = 360 * static_cast<int>(precision_);
 	info->startIndex = 0;
-
+	//info->sampleRate = 1;
 	return true;
 }
 
@@ -214,10 +215,12 @@ SlamtecCHOP::execute(CHOP_Output* output,
 			case CoordMenuItems::Polar:
 				for(int i = 0; i < num_samples_; i++)
 				{
-					output->channels[0][i] = static_cast<float>(lidar->data_[i].angle) / precision_;
-					output->channels[1][i] = lidar->data_[i].distance;
-					output->channels[2][i] = static_cast<float>(lidar->data_[i].quality);
-					output->channels[3][i] = static_cast<float>(lidar->data_[i].flag);
+					if (lidar->data_[i].quality > 2.) {
+						output->channels[0][i] = static_cast<float>(lidar->data_[i].angle) / precision_;
+						output->channels[1][i] = lidar->data_[i].distance;
+						output->channels[2][i] = static_cast<float>(lidar->data_[i].quality);
+						output->channels[3][i] = static_cast<float>(lidar->data_[i].flag);
+					}
 				}
 				break;
 			case CoordMenuItems::Cartesian:

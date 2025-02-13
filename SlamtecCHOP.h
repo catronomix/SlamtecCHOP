@@ -20,8 +20,6 @@
 
 #include "drvlogic/RPLidarDevice.h"
 
-// #include "rplidar_sdk/sdk/include/sl_lidar.h"
-// #include "rplidar_sdk/sdk/include/sl_lidar_driver.h"
 
 /*
 This example implements a CHOP which takes the following parameters:
@@ -80,7 +78,7 @@ private:
 	CoordMenuItems	coord_;
 
 	int32_t	my_execute_count_;
-	int		num_samples_;
+	int		num_samples_ = 360;
 	int		num_channels_ = 4;
 	int		motor_speed_ = 0;
 	double	distance_max_ = 40;

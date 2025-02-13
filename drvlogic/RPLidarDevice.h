@@ -1,7 +1,22 @@
 ﻿
 #pragma once
 #include "common.h"
+#include "../rplidar_sdk/sdk/include/sl_lidar.h" 
+#include "../rplidar_sdk/sdk/include/sl_lidar_driver.h"
+#include <thread>
+#ifndef _countof
+#define _countof(_Array) (int)(sizeof(_Array) / sizeof(_Array[0]))
+#endif
 
+using namespace sl;
+
+typedef struct lidar_data
+{
+    int         angle;
+    float       distance;
+    int         quality;
+    int         flag;
+} __attribute__((packed)) lidar_data;
 class RPLidarDevice {
 
     public:
@@ -36,6 +51,7 @@ class RPLidarDevice {
         // motor data
         std::string max_speed;
         std::string min_speed;
+        sl_lidar_response_desired_rot_speed_t current_speed;
         std::string desired_speed;
         std::string motor_control;
         //scan modes
@@ -43,7 +59,7 @@ class RPLidarDevice {
         std::string scanModesStr = "";
         LidarScanMode currentScanMode;
         
-        lidar_data data_[720*2];
+        lidar_data data_[720];
         int data_count_;
 
         std::string _address_1;     // serial port / ip
@@ -57,6 +73,7 @@ class RPLidarDevice {
     protected:
 
         std::string status_msg_;
+        std::string status_motor_;
         
         bool  is_connected_;
         bool  is_busy_;             // for multithreading
