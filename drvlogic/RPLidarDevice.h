@@ -59,7 +59,7 @@ class RPLidarDevice {
         std::string scanModesStr = "";
         LidarScanMode currentScanMode;
         
-        lidar_data data_[720];
+        lidar_data data_[720*2];
         int data_count_;
 
         std::string _address_1;     // serial port / ip

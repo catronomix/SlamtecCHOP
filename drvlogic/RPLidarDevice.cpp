@@ -127,7 +127,7 @@ RPLidarDevice::thr_connect(bool& serial, std::string& address_1, int& address_2,
     get_scan_modes();
 
     /*if (serial)
-        lidar_drv_->setMotorSpeed(52685);
+        lidar_drv_->setMotorSpeed(52685); // crashes c1
     */
     if(standart)
         lidar_drv_->startScanExpress(0,1,0,&currentScanMode);
@@ -167,7 +167,7 @@ RPLidarDevice::on_disconnect()
 
     if (is_connected_) {
         lidar_drv_->stop();
-        /*if (_channelTypeSerial) lidar_drv_->setMotorSpeed(0);*/
+        /*if (_channelTypeSerial) lidar_drv_->setMotorSpeed(0);*/ // crashes c1 and also handled in driver
     }
     is_connected_ = false;
     delete lidar_drv_;
@@ -270,12 +270,8 @@ void RPLidarDevice::scan(float min_dist, float max_dist)
 {
     if(is_busy_ || !is_connected_) return;
     
+    //sl_lidar_response_measurement_node_hq_t nodes[8192];
 
-    /*if (_standart)
-        sl_lidar_response_measurement_node_t nodes[8192];
-    else
-        sl_lidar_response_measurement_node_hq_t nodes[8192];
-    */
     sl_lidar_response_measurement_node_hq_t nodes[8192];
     size_t   count = _countof(nodes);
 
@@ -308,10 +304,10 @@ void RPLidarDevice::scan(float min_dist, float max_dist)
 
             if(write)
             {
-                data_[int_deg].distance = distance / 1000.;
-                data_[int_deg].angle = angle;
-                data_[int_deg].quality = nodes[pos].quality;
-                data_[int_deg].flag =    nodes[pos].flag;
+                data_[halfAngle].distance = distance / 1000.;
+                data_[halfAngle].angle = angle;
+                data_[halfAngle].quality = nodes[pos].quality;
+                data_[halfAngle].flag =    nodes[pos].flag;
             }
 
         }
@@ -320,7 +316,7 @@ void RPLidarDevice::scan(float min_dist, float max_dist)
 
 void RPLidarDevice::init_data()
 {
-    for(int i =0; i < 360; i++)
+    for(int i =0; i < 720*2; i++)
     {
         data_[i].distance = 0;
         data_[i].angle = i/2.;
