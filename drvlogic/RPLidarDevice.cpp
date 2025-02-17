@@ -130,9 +130,9 @@ RPLidarDevice::thr_connect(bool& serial, std::string& address_1, int& address_2,
         lidar_drv_->setMotorSpeed(52685); // crashes c1
     */
     if(standart)
-        lidar_drv_->startScanExpress(0,1,0,&currentScanMode);
+        lidar_drv_->startScanExpress(false,1,0,&currentScanMode);
     else
-        lidar_drv_->startScan(0,1, 0, &currentScanMode);
+        lidar_drv_->startScan(false,true, 0, &currentScanMode);
 
     is_connected_ = true;
     status_msg_ = "Connected to RPLidar on " + _address_1;

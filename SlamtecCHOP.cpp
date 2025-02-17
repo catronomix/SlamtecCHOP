@@ -226,7 +226,7 @@ SlamtecCHOP::execute(CHOP_Output* output,
 			case CoordMenuItems::Cartesian:
 				for(int i = 0; i < num_samples_; i++)
 				{
-					float angle = static_cast<float>(lidar->data_[i].angle) / precision_ * degreesToRadians;
+					float angle = static_cast<float>(lidar->data_[i].angle) * degreesToRadians;
 					output->channels[0][i] = lidar->data_[i].distance * cos(angle);
 					output->channels[1][i] = lidar->data_[i].distance * sin(angle);
 					output->channels[2][i] = static_cast<float>(lidar->data_[i].quality);
