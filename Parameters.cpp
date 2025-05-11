@@ -121,7 +121,7 @@ Parameters::setup(OP_ParameterManager* manager)
 		bw.name = BaudrateName;
 		bw.label = BaudrateLabel;
 		bw.page = PageConnectionsName;
-		bw.defaultValue = "1000000";
+		bw.defaultValue = "460800";
 
 		std::array<const char*, 4> Names =
 		{
