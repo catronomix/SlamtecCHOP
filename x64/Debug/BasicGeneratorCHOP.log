@@ -1,0 +1,14 @@
+﻿  RPLidarDevice.cpp
+C:\GITHUB\SlamtecCHOP\drvlogic\RPLidarDevice.cpp(279,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\GITHUB\SlamtecCHOP\drvlogic\RPLidarDevice.cpp(298,27): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\GITHUB\SlamtecCHOP\drvlogic\RPLidarDevice.cpp(307,54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\GITHUB\SlamtecCHOP\drvlogic\RPLidarDevice.cpp(308,42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\GITHUB\SlamtecCHOP\drvlogic\RPLidarDevice.cpp(322,27): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  SlamtecCHOP.cpp
+C:\GITHUB\SlamtecCHOP\SlamtecCHOP.cpp(211,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\GITHUB\SlamtecCHOP\SlamtecCHOP.cpp(211,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Parameters.cpp
+  Generating Code...
+rplidar_driver.lib(sl_serial_channel.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library C:\GITHUB\SlamtecCHOP\x64\Debug\SlamtecCHOP.lib and object C:\GITHUB\SlamtecCHOP\x64\Debug\SlamtecCHOP.exp
+  BasicGeneratorCHOP.vcxproj -> C:\GITHUB\SlamtecCHOP\x64\Debug\SlamtecCHOP.dll
